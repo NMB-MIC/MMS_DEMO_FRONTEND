@@ -1,7 +1,3 @@
-
-
-
-
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import React, { Component } from "react";
 import { key, YES } from "./constants";
@@ -13,8 +9,12 @@ import SideMenu from "./components/sideMenu/sideMenu";
 import Footer from "./components/footer/footer";
 import Home from "./components/home/Home";
 import Login from "./components/login/Login";
-import Turning_cover from "./components/realtime/turning_cover";
+
+import Register from "./components/register/register";
+
 import Production from "./components/realtime/production";
+import Mms_alarm from "./components/realtime/mms_alarm";
+import MMS_GD from "./components/realtime/mms_gd";
 
 const isLoggedIn = () => {
   //return true if === YES
@@ -26,6 +26,13 @@ const SecuredRoute = ({ children }) => {
   }
   return <Navigate to="/login" />;
 };
+
+// const SecuredRoute = ({ component: Component, ...rest }) => (
+//   <Route
+//     {...rest}
+//     element={isLoggedIn() === true ? <Component /> : <Navigate to="/login" />}
+//   />
+// );
 
 // const SecuredAdminRoute = ({ component: Component, ...rest }) => (
 //   <Route
@@ -47,8 +54,8 @@ const SecuredRoute = ({ children }) => {
 class App extends Component {
   componentDidMount() {}
 
-  redirectToHome = () => {
-    return <Navigate to="/home" />;
+  redirectToLogin = () => {
+    return <Navigate to="/login" />;
   };
   render() {
     document.title = APP_TITLE;
@@ -60,26 +67,24 @@ class App extends Component {
           {isLoggedIn() && <SideMenu />}
 
           <Routes>
+            <Route path="/login" element={<Login />} />
+
             <Route
-              path="/login"
+              path="/home"
               element={
                 <SecuredRoute>
-                  <Login />
+                  <Home />
                 </SecuredRoute>
               }
             />
 
-            {/* <Route path="/login" element={<Login />} /> */}
-            {/* <Route path="/register" element={<Register />} /> */}
-            
-            <Route path="/home" element={<Home />} />
-            <Route path="/turning_cover" element={<Turning_cover />} />
+            <Route path="/register" element={<Register />} />
             <Route path="/production" element={<Production />} />
-            
+            <Route path="/Mms_alarm" element={<Mms_alarm />} />
+            <Route path="/mms_gd" element={<MMS_GD />} />
 
-
-            <Route path="/" element={<this.redirectToHome />} />
-            <Route path="*" element={<this.redirectToHome />} />
+            <Route path="/" element={<this.redirectToLogin />} />
+            <Route path="*" element={<this.redirectToLogin />} />
           </Routes>
 
           {isLoggedIn() && <Footer />}
