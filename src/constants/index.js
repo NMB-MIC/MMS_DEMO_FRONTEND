@@ -56,41 +56,28 @@ export const server = {
     LOGIN_URL : `authen/login`, 
     URL_REGIST:    `authen/register`,   
     LOGIN_PASSED : `yes`,
-    
-    //single part master
-    ALL_MASTER_SG : `single_part/allMasterSG`,
-    GENERATE_QR: `qr_generate/getQRManufacturingOrder`,
-    ALL_TRANS_MO : `transaction/allTransactionsOrder`,
-    CHECK_REPEAT_SCAN_PART: `transaction/partNumberCheck`,
-    INSERT_MO_PART: `transaction/insertTransactions`,
-    GET_PROCESS_LINE : `mr_process/getProcessLinePart`,
-    INSERT_Mat_URL : `issue/scanInsert_material`, 
-    INSERT_FG_URL : `finished_goods/scanInsert_FG`, 
-    INSERT_KIT_RECEIVED_URL : `kitupreceived/scanInsert_kitupreceived`, 
-    INSERT_KIT_ISSUE_URL : `kitupissue/scanInsert_kitupsIssue`, 
 
-    
-    GET_FG_SG_URL : `finished_goods/resultFG_SG_Linestock`, 
-    GET_FG_BAL_URL : `finished_goods/resultFG_SG_stock`, 
-    GET_FG_INFO_URL : `finished_goods/resultInfo`, 
-    //GET_MAT_BAL_KIT_URL : `finished_goods/resultMaterial_Linestock`, 
-    GET_MAT_KIT_RECEIVED_URL : `kitupreceived/resultMaterial_Kit_Received`, 
-    GET_MAT_KIT_ISSUE_URL : `kitupissue/resultMaterial_Kit_Issue`, 
-    GET_MAT_KIT_BALANCE_URL : `kitupreceived/resultMaterial_KitupStock`, 
-    GET_MAT_LINE_BALANCE_URL : `finished_goods/resultMaterial_Linestock`, 
-    
-    
-    GET_MO_QTY_URL : `productionSheet/result_ProductionSheet`, 
+
+    chart_mms_URL: `api_counter/mms`,
+    Master_mc_URL: `api_counter/mms_machine`,
+    GANTT_MMS_URL: `api_statusMMS/gantt_MMS`, 
+    GET_MASTER_MC: `api_counter/master_mc`,
+    TIMELINE_ALARMLIST: `api_counter/Timeline_Alarmlist`,
+    AlarmTopic_time_TB2: `api_counter/AlarmTopic_time2`,
+    mc_status_log: `api_counter/mms_log`,
+
+
+    // master_machine: `api_counter/master_MC`,
    
-    OUTPUT_HR_URL : `summarize_PR/output_hr`, 
-    OUTPUT_Day_URL : `summarize_PR/output_daily`, 
-    SUB2_OUTPUT : `summarize_PR/daily_stack` , 
-    Hr_STACK : `summarize_PR/hour_stack` ,
-    Hr_data : `summarize_PR/hour_data` ,
-    Daily_data : `summarize_PR/Daily_data`,
-    byMonth : `summarize_PR/byMonth`,
+    
+   
+    // AlarmTopic_time_TB: `api_nhtGrinding/AlarmTopic_time`,
+    
+    // Alarm_Non_Operating_GD: `api_nhtGrinding/MC_Status_All`, // show % non and operating
+    // MC_by_status_GD: `api_nhtGrinding/mc_by_status`, // show % non and operating
+    // MC_status_daily_GD: `api_nhtGrinding/count_mc_status_daily_GD`, // show count daily by mc
+    // MMS_GD_ICB:`api_nhtGrinding/mms_counter_ICB`, 
 
-    master_target_URL : `master_target/add_data` ,
-    master_cusItem : `master_target/cus_PN`,
-    Data_URL : `master_target/select_data`
+    
+  
   }
