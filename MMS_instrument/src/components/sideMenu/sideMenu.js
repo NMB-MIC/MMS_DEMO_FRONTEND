@@ -69,13 +69,13 @@ class SideMenu extends Component {
                 <ul className="nav nav-treeview">
                   <li className="nav-item">
                     <a className="nav-link">
-                      <Link to="/instrument" className="nav-link">
+                      <Link to="/pcmb_instrument" className="nav-link">
                         <i className="far fa-dot-circle nav-icon" />
                         <p style={divStyle}>Equipment</p>
                       </Link>
                     </a>
 
-                    <ul className="nav nav-treeview">
+                    {/* <ul className="nav nav-treeview">
                       <li className="nav-item">
                         <a className="nav-link">
                           <Link to="/mitutoyo" className="nav-link">
@@ -84,7 +84,7 @@ class SideMenu extends Component {
                           </Link>
                         </a>
                       </li>
-                    </ul>
+                    </ul> */}
              
                   </li>
                 </ul>
