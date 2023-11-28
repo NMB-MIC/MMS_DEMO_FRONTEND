@@ -93,7 +93,7 @@ const Production = () => {
               </div>
               <div className="text-sm-left mb-5 text-center text-md-left mb-sm-3 col-6 col-sm-12">
                 <h3 className="page-title" >
-                  MODEL : XXXXXX
+                  MODEL : XXXXXXXXXXX
                 </h3>
               </div>
             </div>
